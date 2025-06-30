@@ -4,8 +4,8 @@ import { CustomNamingStrategy } from "src/utils/custome-naming";
 import { DataSource } from "typeorm";
 
 config({
-  // path: join(__dirname, ".env.production"), // Adjust the path to your .env file for production
-  path: join(__dirname, ".env"), // Use .env for development
+  path: join(__dirname, ".env.production"), // Adjust the path to your .env file for production
+  // path: join(__dirname, ".env"), // Use .env for development
 });
 
 export default new DataSource({

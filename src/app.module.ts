@@ -50,8 +50,8 @@ import { GuestUserModule } from './modules/guest-user/guest-user.module';
     ScheduleModule.forRoot(),
     ConfigModule.forRoot({
       isGlobal: true,
-      // envFilePath: `.env.${process.env.NODE_ENV}`,  // for production
-      envFilePath: ['.env', `.env.${process.env.NODE_ENV}`],   // for development
+      envFilePath: `.env.${process.env.NODE_ENV}`,  // for production
+      // envFilePath: ['.env', `.env.${process.env.NODE_ENV}`],   // for development
       load: [config],
     }),
     TypeOrmModule.forRootAsync({
