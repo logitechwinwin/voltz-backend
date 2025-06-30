@@ -1,0 +1,63 @@
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>KYC Status Update</title>
+    <style>
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } table, td { mso-table-rspace:
+      0pt; mso-table-lspace: 0pt; } img { -ms-interpolation-mode: bicubic; } body { margin: 0; padding: 0; width: 100%;
+      height: 100%; } table { border-collapse: collapse !important; } body, #bodyTable, #bodyCell { height: 100%
+      !important; margin: 0; padding: 0; width: 100% !important; font-family: Arial, sans-serif; } #bodyCell { padding:
+      20px; } .email-container { max-width: 600px; margin: auto; background-color: #EDFCFF; border: 1px solid #236D7D;
+      border-radius: 8px; overflow: hidden; } .email-header { background-color: #236D7D; color: #EDFCFF; padding: 20px;
+      text-align: center; font-size: 24px; } .email-body { padding: 20px; color: #333; } .email-body h2 { color:
+      #236D7D; } .email-footer { background-color: #236D7D; color: #EDFCFF; text-align: center; padding: 10px; } .button
+      { display: inline-block; padding: 10px 20px; margin: 20px 0; font-size: 18px; color: #EDFCFF; background-color:
+      #236D7D; text-decoration: none; border-radius: 5px; } @media screen and (max-width: 600px) { .email-container {
+      width: 100% !important; } }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table id="bodyTable" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td id="bodyCell" align="center" valign="top">
+            <table class="email-container" role="presentation" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="email-header">
+                  <img
+                    src="{{backendUrl}}/images/defaults/app-logo.svg"
+                    alt="Voltz Logo"
+                    style="width: 92px; height: auto;"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="email-body">
+                  <h2>Hello, {{name}}</h2>
+                  <p>We are pleased to inform you that your KYC has been approved. You can now set your password
+                    by clicking the button below:</p>
+                  <p><a href="{{redirectUrl}}" class="button">Set Password</a></p>
+                  <p>If you did not request this, please ignore this email.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="email-footer">
+                  &copy;
+                  {{year}}
+                  {{companyName}}. All rights reserved.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
