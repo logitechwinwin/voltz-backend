@@ -177,9 +177,9 @@ export class VolunteerRequestService {
       .setParameters({ lng: checkInDto.longitude, lat: checkInDto.latitude })
       .getRawOne();
 
-    if (!isWithinRadius) {
-      throw new BadRequestException("Out of location");
-    }
+    // if (!isWithinRadius) {
+    //   throw new BadRequestException("Out of location");
+    // }
 
     const volunteerRequest = this.volunteerRequestRepository.create({
       user: user,

@@ -294,7 +294,16 @@ export class AuthService {
         }
         break;
       case SocialType.FACEBOOK:
-        retrieveUserData = await this.facebookAuthService.verifyToken(token);
+        try {
+          console.log("Verifying Facebook token:", token);
+          retrieveUserData = await this.facebookAuthService.verifyToken(token);
+          if (!retrieveUserData.email) {
+            throw new BadRequestException("Facebook token does not contain an email");
+          }
+        } catch (error) {
+          console.error("Error verifying Facebook token:", error);
+          throw new BadRequestException("Invalid Facebook token");
+        }
         break;
       case SocialType.APPLE:
         retrieveUserData = await this.appleAuthService.verifyToken(token);
